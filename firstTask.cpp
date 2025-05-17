@@ -3,17 +3,18 @@
 using namespace std;
 
 void println(string str = "") {
-	сout << str << endl;
+	cout << str << endl;
 }
 
 void truthLine(bool firstArg, bool secondArg, string opr) {
-	bool res = false;
+	bool res;
+	auto convLambda = [](bool inputVal) {return inputVal ? "true" : "false";};
 	if (opr == "||") {
 		res = firstArg || secondArg;
-		printf("%b %b %b", firstArg, secondArg, res);
+		printf("%s %s %s\n", convLambda(firstArg), convLambda(secondArg), convLambda(res));
 	} else if (opr == "&&") {
 		res = firstArg && secondArg;
-		printf("%b %b %b", firstArg, secondArg, res);
+		printf("%s %s %s\n", convLambda(firstArg), convLambda(secondArg), convLambda(res));
 	}
 }
 
