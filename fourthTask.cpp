@@ -66,7 +66,7 @@ int main() {
         } else if (num1 == num2) {
             expression = EQUAL;
         }
-        string fStr = num1 < 0 ? toNumeral(abs(num1)) : toNumeral(num1);
+        string fStr = num1 < 0 ? "минус " + toNumeral(abs(num1)) : toNumeral(num1);
         string sStr = num2 < 0 ? "минус " + toNumeral(abs(num2)) : toNumeral(num2);
         println(fStr + expression + " " + sStr);
     } else {
